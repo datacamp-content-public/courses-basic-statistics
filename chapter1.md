@@ -952,3 +952,67 @@ ex() %>% check_output_expr("mtcars")
 ex() %>% check_expr("mtcars") %>% check_result() %>% check_equal()
 success_msg("You just printed your first dataframe")
 ```
+
+---
+
+## Inspecting dataframes
+
+```yaml
+type: NormalExercise
+key: 70855f1cb0
+xp: 100
+```
+
+There are several functions you can use to inspect your dataframe. To name a few
+
+* head: this by default prints the first 6 rows of the dataframe
+* tail: this by default prints the last 6 rows to the console
+* str: this prints the structure of your dataframe
+* dim: this by default prints the dimensions, that is, the number of rows and columns of your dataframe
+* colnames: this prints the names of the columns of your dataframe
+
+`@instructions`
+* Print the first 6 rows of mtcars
+* Print the structure of the dataframe mtcars
+* Print the dimensions of the dataframe mtcars
+
+`@hint`
+Think about the functions head, str and dim.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# print the first 6 rows of mtcars
+
+
+# print the structure of mtcars
+
+
+# print the dimensions of mtcars
+
+
+```
+
+`@solution`
+```{r}
+# print the first 6 rows of mtcars
+head(mtcars)
+
+# print the structure of mtcars
+str(mtcars)
+
+# print the dimensions of mtcars
+dim(mtcars)
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("head(mtcars)")
+ex() %>% check_output_expr("str(mtcars)")
+ex() %>% check_output_expr("dim(mtcars)")
+success_msg("Good job, you'll become an expert in looking at your data")
+```
