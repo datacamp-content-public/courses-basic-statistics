@@ -433,7 +433,6 @@ my_logical <- FALSE
 
 `@sct`
 ```{r}
-ex() %>% check_output("11")
 ex() %>% check_expr("my_character") %>% check_result() %>% check_equal()
 ex() %>% check_expr("my_logical") %>% check_result() %>% check_equal()
 success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change my_apples to equal 12 instead of 5 and rerun the script, my_fruit will automatically update as well. Continue to the next exercise.")
@@ -474,10 +473,10 @@ c <- FALSE
 `@sct`
 ```{r}
 msg1 <- "Not good, try again!"
-msg2 <- "Nice one!"
+msg2 <- "Not good, try again!"
 msg3 <- "Not quite, give it another shot."
-ex() %>% check_mc(4, feedback_msgs = c(msg1, msg2, msg3))
-success_msg("Nice one. Let's step it up a notch and start coercing variables!")
+msg4 <- "Nice one. Let's step it up a notch and start coercing variables!"
+ex() %>% check_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
 ---
