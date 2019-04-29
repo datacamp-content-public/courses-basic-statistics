@@ -575,3 +575,60 @@ ex() %>% check_expr("var2_log") %>% check_result() %>% check_equal()
 ex() %>% check_expr("var3_num") %>% check_result() %>% check_equal()
 success_msg("Well done, this concludes the exercises of working with variables")
 ```
+
+---
+
+## Create a vector I
+
+```yaml
+type: NormalExercise
+key: 485cfb9cb3
+xp: 100
+```
+
+On your way from rags to riches, you will make extensive use of vectors. Vectors are one-dimension arrays that can hold numeric data, character data, or logical data. In other words, a vector is a simple tool to store data. For example, you can store your daily gains and losses in the casinos.
+
+In R, you create a vector with the combine function c(). You place the vector elements separated by a comma between the brackets. For example:
+
+```
+numeric_vector <- c(1, 2, 3)
+character_vector <- c("a", "b", "c")
+boolean_vector <- c(TRUE, FALSE)
+```
+
+Once you have created these vectors in R, you can use them to do calculations.
+
+`@instructions`
+Complete the code such that boolean_vector contains the three elements: TRUE, FALSE and TRUE (in that order).
+
+`@hint`
+Assign c(TRUE,FALSE,TRUE) to the variable boolean_vector with the <- operator. You can also use the shorter notations, T and F for TRUE and FALSE respectively.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+numeric_vector <- c(1, 10, 49)
+character_vector <- c("a", "b", "c")
+
+# Complete the code for 'boolean_vector'
+
+```
+
+`@solution`
+```{r}
+numeric_vector <- c(1, 10, 49)
+character_vector <- c("a", "b", "c")
+
+# Complete the code for 'boolean_vector'
+boolean_vector <- c(TRUE, FALSE, TRUE)
+```
+
+`@sct`
+```{r}
+ex() %>% check_expr("boolean_vector") %>% check_result() %>% check_equal()
+success_msg("Awesome! You defined one great boolean vector!")
+```
