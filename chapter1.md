@@ -471,10 +471,14 @@ You can find out the data type of the a variable for example by typing class(a).
 ```{r}
 a <- 42
 b <- "forty-two"
-c <- 
+c <- FALSE
 ```
 
 `@sct`
 ```{r}
-
+msg1 <- "Not good, try again!"
+msg2 <- "Nice one!"
+msg3 <- "Not quite, give it another shot."
+ex() %>% check_mc(2, feedback_msgs = c(msg1, msg2, msg3))
+success_msg("Nice one. Let's step it up a notch and start coercing variables!")
 ```
