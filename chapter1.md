@@ -162,8 +162,6 @@ Adding comments to your code is extremely important to make sure that you and ot
 
 It's important to note that comments are not run as R code, so they will not influence your result. For example, Calculate 3 + 4 in the editor on the right is a comment and is ignored during execution.
 
-
-
 `@instructions`
 Add another comment in the editor on the right, Calculate 6 + 12, at the appropriate location.
 
