@@ -196,4 +196,5 @@ Simply add the line # Calculate 6 + 12 above the R code that calculates 6 + 12.
 `@sct`
 ```{r}
 ex() %>% check_code()
+success_msg("Great! Looks better, doesn't it? Proceed to the next exercise.")
 ```
