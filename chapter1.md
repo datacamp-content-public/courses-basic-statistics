@@ -14,6 +14,7 @@ skills: 1
 ```
 
 This is an example exercise.
+Print "Hello World"!
 
 `@instructions`
 
@@ -33,7 +34,7 @@ This is an example exercise.
 
 `@solution`
 ```{r}
-
+print("")
 ```
 
 `@sct`
