@@ -198,3 +198,52 @@ Simply add the line # Calculate 6 + 12 above the R code that calculates 6 + 12.
 ex() %>% check_code()
 success_msg("Great! Looks better, doesn't it? Proceed to the next exercise.")
 ```
+
+---
+
+## Variable assignment I
+
+```yaml
+type: NormalExercise
+key: 89f3af7de9
+xp: 100
+```
+
+A basic concept in R programming is the **variable**. It allows you to store a value or an object in R. You can then later use this variable's name to easily access the value or the object that is stored within this variable. You use <- to assign a variable:
+```
+my_variable <- 4
+```
+
+`@instructions`
+Complete the code in the editor such that it assigns the value 42 to the variable `x` in the editor. Click 'Submit Answer'. Notice that when you ask R to print `x`, the value 42 appears.
+
+`@hint`
+Look at how the value 4 was assigned to my_variable in the exercise's assignment. Do the exact same thing in the editor, but now assign 42 to the variable x.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Assign the value 42 to x
+x <- 
+
+# Print out the value of the variable x
+x
+```
+
+`@solution`
+```{r}
+# Assign the value 42 to x
+x <- 42
+
+# Print out the value of the variable x
+x
+```
+
+`@sct`
+```{r}
+
+```
