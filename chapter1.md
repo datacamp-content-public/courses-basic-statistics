@@ -694,9 +694,10 @@ The (logical) comparison operators known to R are: - < for less than - > for gre
 
 The nice thing about R is that you can use these comparison operators on vectors. For example, the statement c(4,5,6) > 5 returns: FALSE FALSE TRUE. In other words, you test for every element of the vector if the condition stated by the comparison operator is TRUE or FALSE.
 
-Behind the scenes, R does an element-wise comparison of each element in the vector c(4,5,6) with the element 5. However, 5 is not a vector of length three. To solve this, R automatically replicates the value 5 to generate a vector of three elements, c(5, 5, 5) and then carries out the element-wise comparison.
 
 `@instructions`
+* Behind the scenes, R does an element-wise comparison of each element in the vector c(4,5,6) with the element 5. However, 5 is not a vector of length three. To solve this, R automatically replicates the value 5 to generate a vector of three elements, c(5, 5, 5) and then carries out the element-wise comparison.
+
 * Check which values in numeric_vector are larger than 10. Assign the result to the variable larger_than_ten.
 * print the variable larger_than_ten to the console.
 
@@ -790,9 +791,10 @@ matrix(1:9, byrow = TRUE, nrow = 3, ncol = 3)
 In the matrix() function:
 
 * The first argument is the collection of elements that R will arrange into the rows and columns of the matrix. Here, we use 1:9 which constructs the vector c(1, 2, 3, 4, 5, 6, 7, 8, 9).
-* The argument byrow indicates that the matrix is filled by the rows. This means that the matrix is filled from left to right and when the first row is completed, the filling continues on the second row. If we want the matrix to be filled by the columns, we just place byrow = FALSE.
-* The third argument nrow indicates that the matrix should have three rows.
+* The argument byrow indicates that the matrix is filled by the rows. 
+* The third argument nrow - three rows.
 * The fourth argument ncol indicates the number of columns that the matrix should have
+
 
 `@instructions`
 * Construct a matrix with 5 rows and 4 columns containing the numbers 1 up to 20 and assign it to the variable m. Specify the byrow argument to be TRUE
