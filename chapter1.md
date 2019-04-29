@@ -572,6 +572,7 @@ var3_num <- as.numeric(var3)
 ```{r}
 ex() %>% check_expr("var1_char") %>% check_result() %>% check_equal()
 ex() %>% check_expr("var2_log") %>% check_result() %>% check_equal()
+ex() %>% check_output_expr("class(var2_log)")
 ex() %>% check_expr("var3_num") %>% check_result() %>% check_equal()
 success_msg("Well done, this concludes the exercises of working with variables")
 ```
@@ -691,8 +692,8 @@ boolean_vector[c(2,3)]
 
 `@sct`
 ```{r}
-ex() %>% check_output("a")
-ex() %>% check_output(c(FALSE, FALSE)) 
+ex() %>% check_output_expr("character_vector[1]")
+ex() %>% check_output_expr("boolean_vector[c(2,3)]")
 success_msg("Well done!")
 ```
 
@@ -742,6 +743,49 @@ larger_than_ten
 
 `@sct`
 ```{r}
-ex() %>% check_output() %>% check_equal()
+ex() %>% check_output_expr("larger_than_ten")
+ex() %>% check_expr("larger_than_ten") %>% check_result() %>% check_equal()
 success_msg("Well done!")
+```
+
+---
+
+## Selection by comparison II
+
+```yaml
+type: NormalExercise
+key: 10e19fc07c
+xp: 100
+```
+
+In the last exercise we saw larger_than_ten consisted of a vector of TRUE and FALSE. We make use of this logical vector to select elements from another vector. For instance, `numeric_vector[c(TRUE, FALSE, TRUE)]` will select the first and the third element from the vector numeric_vector.
+
+`@instructions`
+Print the items from numeric_vector that are larger than 10
+
+`@hint`
+You may want to use the vector larger_than_ten for indexing the vector numeric_vector.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+numeric_vector <- c(1, 10, 49)
+larger_than_ten <- numeric_vector > 10
+```
+
+`@solution`
+```{r}
+numeric_vector <- c(1, 10, 49)
+larger_than_ten <- numeric_vector > 10
+numeric_vector[larger_than_ten]
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("numeric_vector[larger_than_ten]")
+success_msg("Great job, you seem to get indexing!")
 ```
