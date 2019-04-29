@@ -1016,3 +1016,82 @@ ex() %>% check_output_expr("str(mtcars)")
 ex() %>% check_output_expr("dim(mtcars)")
 success_msg("Good job, you'll become an expert in looking at your data")
 ```
+
+---
+
+## Constructing a dataframe yourself
+
+```yaml
+type: NormalExercise
+key: cb326419c3
+xp: 100
+```
+
+Since using built-in data sets is not even half the fun of creating your own data sets, the rest of this chapter is based on your personally developed data set.
+
+As a first goal, you want to construct a data frame that describes the main characteristics of eight planets in our solar system. The main features of a planet are:
+
+* The type of planet (Terrestrial or Gas Giant).
+* The planet's diameter relative to the diameter of the Earth.
+* The planet's rotation across the sun relative to that of the Earth.
+* If the planet has rings or not (TRUE or FALSE).
+
+You construct a data frame with the data.frame() function. As arguments, you should provide the above mentioned vectors as input that should become the different columns of that data frame. Therefore, it is important that each vector used to construct a data frame has an equal length. But do not forget that it is possible (and likely) that they contain different types of data.
+
+`@instructions`
+* Use the function data.frame() to construct a data frame. Call this variable planet_df.
+
+`@hint`
+You can wrap each individual vector in the data.frame() function separated by a comma
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# planets vector
+planets <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+
+# type vector
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+
+# diameter vector
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+
+# rotation vector
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+
+# rings vector
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# construct a dataframe planet_df from all the above variables
+```
+
+`@solution`
+```{r}
+# planets vector
+planets <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+
+# type vector
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+
+# diameter vector
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+
+# rotation vector
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+
+# rings vector
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# construct a dataframe planet_df from all the above variables
+planet_df <- data.frame(planets, type, diameter, rotation, rings)
+```
+
+`@sct`
+```{r}
+ex() %>% check_expr("planet_df") %>% check_result() %>% check_equal()
+success_msg("Good job, you'll become an expert with data frames")
+```
