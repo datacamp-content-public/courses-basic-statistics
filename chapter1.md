@@ -905,9 +905,10 @@ You may remember the matrix, a multi-dimensional object that we discussed earlie
 * 'How old are you?' (= numeric data type)
 * 'What is your opinion on this product?' or other 'open-ended' questions (= character data type)
 
-The output, namely the respondents' answers to the questions formulated above, is a data set of different data types. You will often find yourself working with data sets that contain different data types instead of only one. A data frame has the variables of a data set as columns and the observations as rows. This will be a familiar concept for those coming from different statistical software packages such as SAS or SPSS.
 
 `@instructions`
+The output, namely the respondents' answers to the questions formulated above, is a data set of different data types. You will often find yourself working with data sets that contain different data types instead of only one. A data frame has the variables of a data set as columns and the observations as rows. This will be a familiar concept for those coming from different statistical software packages such as SAS or SPSS.
+
 * print the object mtcars to the console.
 
 `@hint`
