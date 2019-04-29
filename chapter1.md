@@ -166,7 +166,7 @@ It's important to note that comments are not run as R code, so they will not inf
 Add another comment in the editor on the right, _Calculate 6 + 12_, at the appropriate location.
 
 `@hint`
-Simply add the line # Calculate 6 + 12 above the R code that calculates 6 + 12.
+Simply add the line `# Calculate 6 + 12` above the R code that calculates 6 + 12.
 
 `@pre_exercise_code`
 ```{r}
