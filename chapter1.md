@@ -376,3 +376,67 @@ ex() %>% check_output("6")
 ex() %>% check_output("11")
 success_msg("Awesome, keep up the good work! Continue to the next exercise.")
 ```
+
+---
+
+## Discover Basic Data Types
+
+```yaml
+type: NormalExercise
+key: 27c83526fe
+xp: 100
+```
+
+Some of R's most basic types to get started are:
+
+* Decimals values like 4.5 are called numerics.
+* Natural numbers like 4 are called integers. Integers are also numerics.
+* Boolean values (TRUE or FALSE) are called logical.
+* Text (or string) values are called characters.
+
+Note how the quotation marks on the right indicate that "some text" is a character.
+
+`@instructions`
+Change the value of the: - my_numeric variable to 42. - my_character variable to "forty-two". Note that the quotation marks indicate that "forty-two" is a character. - my_logical variable to FALSE.
+
+Note that R is case sensitive!
+
+`@hint`
+Replace the values in the editor with the values that are provided in the exercise. 
+my_numeric <- 42 assigns the value 42 to the variable my_numeric.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# What is the answer to the universe?
+my_numeric <- 42.5
+
+# The quotation marks indicate that the variable is of type character
+my_character <- "some text"
+
+# Change the value of my_logical
+my_logical <- TRUE
+```
+
+`@solution`
+```{r}
+# What is the answer to the universe?
+my_numeric <- 42
+
+# The quotation marks indicate that the variable is of type character
+my_character <- "forty-two"
+
+# Change the value of my_logical
+my_logical <- FALSE
+```
+
+`@sct`
+```{r}
+ex() %>% check_output("11")
+ex() %>% check_that(is_true(my_fruit == 11))
+success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change my_apples to equal 12 instead of 5 and rerun the script, my_fruit will automatically update as well. Continue to the next exercise.")
+```
