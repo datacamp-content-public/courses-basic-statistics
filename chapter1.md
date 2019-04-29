@@ -482,3 +482,96 @@ msg3 <- "Not quite, give it another shot."
 ex() %>% check_mc(4, feedback_msgs = c(msg1, msg2, msg3))
 success_msg("Nice one. Let's step it up a notch and start coercing variables!")
 ```
+
+---
+
+## Coercion: Taming your data
+
+```yaml
+type: NormalExercise
+key: 3b3c8f7d1b
+xp: 100
+```
+
+It is possible to transform your data from one type to the other. Next to the class() function, you can use the as.*() functions to enforce data to change types. For example,
+
+```
+var <- "3"
+var_num <- as.numeric(var)
+```
+converts the character string "3" in var to a numeric 3 and assigns it to var_num. However, keep in my that it is not always possible to convert the types without losing information or getting errors.
+
+```
+as.integer("4.5")
+as.numeric("three")
+```
+The first line will convert the character string "4.5" to the integer 4. The second one will convert the character string "three" to an NA.
+
+`@instructions`
+* var1 is logical. Convert it to character and assign it to the variable var1_char.
+* Next, see whether var1_char actually is a character by using the is.character() function on it.
+* var2 is numeric. Convert it logical and assign it to the variable var2_log.
+* Inspect the class of var2_log using class().
+* Finally, var3 is of type character. Convert it to numeric and assign the result to var3_num. Was it successful?
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Create variables var1, var2 and var3
+var1 <- TRUE
+var2 <- 0.3
+var3 <- "i"
+
+# var1 is logical; convert it to character: var1_char
+
+
+# See whether var1_char is a character
+
+
+# var2 is numeric; convert it to logical: var2_log
+
+
+# Inspect the class of var2_log
+
+
+# var3 is character; convert it to numeric: var3_num
+  
+```
+
+`@solution`
+```{r}
+# Create variables var1, var2 and var3
+var1 <- TRUE
+var2 <- 0.3
+var3 <- "i"
+
+# Convert var1 to a character: var1_char
+var1_char <- as.character(var1)
+
+# See whether var1_char is a character
+is.character(var1_char)
+
+# Convert var2 to a logical: var2_log
+var2_log <- as.logical(var2)
+
+# Inspect the class of var2_log
+class(var2_log)
+
+# Coerce var3 to a numeric: var3_num
+var3_num <- as.numeric(var3)
+```
+
+`@sct`
+```{r}
+ex() %>% check_expr("var1_char") %>% check_result() %>% check_equal()
+ex() %>% check_expr("var2_log") %>% check_result() %>% check_equal()
+ex() %>% check_expr("var3_num") %>% check_result() %>% check_equal()
+success_msg("Well done, this concludes the exercises of working with variables")
+```
