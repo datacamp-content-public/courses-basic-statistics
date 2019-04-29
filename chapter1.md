@@ -111,22 +111,17 @@ Another example of the modulo operator: 9 %% 2 equals 1
 
 # Exponentiation
 
-
 # Modulo
-
 ```
 
 `@solution`
 ```{r}
 # Addition
 5 + 5 
-
 # Subtraction
 5 - 5 
-
 # Multiplication
 3 * 5
-
  # Division
 (5 + 5) / 2 
 
