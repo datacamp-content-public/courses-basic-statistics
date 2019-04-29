@@ -692,6 +692,56 @@ boolean_vector[c(2,3)]
 `@sct`
 ```{r}
 ex() %>% check_output("a")
-ex() %>% check_output(c(FALSE, TRUE))
-success_msg("Good job! Notice that R does not print the value of a variable to the console when you do the assignment. x <- 42 did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+ex() %>% check_output(c(FALSE, FALSE)) 
+success_msg("Well done!")
+```
+
+---
+
+## Selection by comparison I
+
+```yaml
+type: NormalExercise
+key: ed5c8e866b
+xp: 100
+```
+
+Sometimes you want to select elements from a vector in a more advanced fashion. This is where the use of logical operators may come in handy.
+
+The (logical) comparison operators known to R are: - < for less than - > for greater than - <= for less than or equal to - >= for greater than or equal to - == for equal to each other - != not equal to each other
+
+The nice thing about R is that you can use these comparison operators on vectors. For example, the statement c(4,5,6) > 5 returns: FALSE FALSE TRUE. In other words, you test for every element of the vector if the condition stated by the comparison operator is TRUE or FALSE.
+
+Behind the scenes, R does an element-wise comparison of each element in the vector c(4,5,6) with the element 5. However, 5 is not a vector of length three. To solve this, R automatically replicates the value 5 to generate a vector of three elements, c(5, 5, 5) and then carries out the element-wise comparison.
+
+`@instructions`
+* Check which values in numeric_vector are larger than 10. Assign the result to the variable larger_than_ten.
+* print the variable larger_than_ten to the console.
+
+`@hint`
+Use the operator the following code to get values larger than 10: numeric_vector > 10
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# A numeric vector containing 3 elements
+numeric_vector <- c(1, 10, 49)
+
+```
+
+`@solution`
+```{r}
+numeric_vector <- c(1, 10, 49)
+larger_than_ten <- numeric_vector > 10
+larger_than_ten
+```
+
+`@sct`
+```{r}
+ex() %>% check_output() %>% check_equal()
+success_msg("Well done!")
 ```
