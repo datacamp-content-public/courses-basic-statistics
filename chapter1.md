@@ -905,3 +905,50 @@ ex() %>% check_output_expr("categorical_student")
 ex() %>% check_expr("categorical_student") %>% check_result() %>% check_equal()
 success_msg("Great job, you can now construct factors!")
 ```
+
+---
+
+## Dataframes: What's a data frame?
+
+```yaml
+type: NormalExercise
+key: 3b7801f987
+xp: 100
+```
+
+You may remember the matrix, a multi-dimensional object that we discussed earlier. All the elements that you put in a matrix should be of the same type. However, when performing a market research survey, you often have questions such as:
+
+* 'Are your married?' or 'yes/no' questions (= boolean data type)
+* 'How old are you?' (= numeric data type)
+* 'What is your opinion on this product?' or other 'open-ended' questions (= character data type)
+
+The output, namely the respondents' answers to the questions formulated above, is a data set of different data types. You will often find yourself working with data sets that contain different data types instead of only one. A data frame has the variables of a data set as columns and the observations as rows. This will be a familiar concept for those coming from different statistical software packages such as SAS or SPSS.
+
+`@instructions`
+* print the object mtcars to the console.
+
+`@hint`
+All you need to do is type "mtcars" in your script
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# print mtcars to the console
+```
+
+`@solution`
+```{r}
+# solution code
+mtcars
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("mtcars")
+ex() %>% check_expr("mtcars") %>% check_result() %>% check_equal()
+success_msg("Great job, you can now construct factors!")
+```
