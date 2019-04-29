@@ -59,7 +59,7 @@ success_msg("Awesome! Do you see how the console shows the result of the R code 
 
 ---
 
-## Insert exercise title here
+## Little arithmetics with R
 
 ```yaml
 type: NormalExercise
@@ -67,13 +67,28 @@ key: 3cef4b61e2
 xp: 100
 ```
 
+In its most basic form R can be used as a simple calculator. Consider the following arithmetic operators:
 
+* Addition: +
+* Subtraction: -
+* Multiplication: *
+* Division: /
+* Exponentiation: ^
+* Modulo: %%
+The last three might need some explaining:
+
+* The ^ operator raises the number to its left to the power of the number to its right: for example 3^2 is 9.
+* The modulo returns the remainder of the division of the number to the left by the number on its right, for example 5 modulo 3 or 5 %% 3 is 2.
+With this knowledge, follow the instructions below to complete the exercise.
 
 `@instructions`
-
+* Type 2^5 in the editor to calculate 2 to the power 5.
+* Type 28 %% 6 to calculate 28 modulo 6.
+* Click 'Submit Answer' and have a look at the R output in the console.
+* Note how the # symbol is used to add comments on the R code.
 
 `@hint`
-
+Another example of the modulo operator: 9 %% 2 equals 1
 
 `@pre_exercise_code`
 ```{r}
@@ -82,12 +97,44 @@ xp: 100
 
 `@sample_code`
 ```{r}
+# Addition
+5 + 5 
+
+# Subtraction
+5 - 5 
+
+# Multiplication
+3 * 5
+
+ # Division
+(5 + 5) / 2 
+
+# Exponentiation
+
+
+# Modulo
 
 ```
 
 `@solution`
 ```{r}
+# Addition
+5 + 5 
 
+# Subtraction
+5 - 5 
+
+# Multiplication
+3 * 5
+
+ # Division
+(5 + 5) / 2 
+
+# Exponentiation
+2 ^ 5
+
+# Modulo
+28 %% 6
 ```
 
 `@sct`
