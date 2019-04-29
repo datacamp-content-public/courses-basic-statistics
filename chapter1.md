@@ -849,3 +849,59 @@ ex() %>% check_output_expr("m")
 ex() %>% check_expr("m") %>% check_result() %>% check_equal()
 success_msg("Great job, you can now create matrices!")
 ```
+
+---
+
+## Factors
+
+```yaml
+type: NormalExercise
+key: 32a00ec357
+xp: 100
+```
+
+In this exercise you dive into the wonderful world of factors.
+
+The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable can belong to a limited number of categories. A continuous variable, on the other hand, can correspond to an infinite number of values.
+
+It is important that R knows whether it is dealing with a continuous or a categorical variable, as the statistical models you will develop in the future treat both types differently.
+
+A good example of a categorical variable is the variable `student_status`. An individual can either be "student" or "not student". This means that "student" and "not student" are two values of the categorical variable `student_status` and every observation can be assigned one of these values. We can do this using the `factor` function.
+
+`@instructions`
+* Turn the vector student_status into a factor and put this in a variable called categorical_student
+* Print the variable categorical_student
+
+`@hint`
+You may want to try `factor(student_status)` and store this in the variable `categorical_student`
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# a vector called student_status
+student_status <- c("student", "not student", "student", "not student")
+
+# turn student_status into a factor and save it in the variable categorical_student
+
+
+# print categorical_student to the console
+```
+
+`@solution`
+```{r}
+# a vector called student_status
+student_status <- c("student", "not student", "student", "not student")
+categorical_student <- factor(student_status)
+categorical_student
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("categorical_student")
+ex() %>% check_expr("categorical_student") %>% check_result() %>% check_equal()
+success_msg("Great job, you can now construct factors!")
+```
