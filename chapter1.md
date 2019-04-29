@@ -950,5 +950,5 @@ mtcars
 ```{r}
 ex() %>% check_output_expr("mtcars")
 ex() %>% check_expr("mtcars") %>% check_result() %>% check_equal()
-success_msg("Great job, you can now construct factors!")
+success_msg("You just printed your first dataframe")
 ```
