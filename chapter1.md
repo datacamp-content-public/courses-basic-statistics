@@ -139,5 +139,11 @@ Another example of the modulo operator: 9 %% 2 equals 1
 
 `@sct`
 ```{r}
-
+ex() %>% check_output("10")
+ex() %>% check_output("0")
+ex() %>% check_output("15")
+ex() %>% check_output("5")
+ex() %>% check_output("32")
+ex() %>% check_output("4")
+success_msg("Great! Head over to the next exercise.")
 ```
