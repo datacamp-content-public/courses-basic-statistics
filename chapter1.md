@@ -450,10 +450,10 @@ class(some_variable_name)
 In the workspace (you can inspect it by typing ls() in the console), some variables have already been defined. Which statement concerning these variables are correct?
 
 `@possible_answers`
-* a's class is integer, b is a character, c is a boolean.
-* a's class is character, b is a character as well, c is a logical.
-* a's class is numeric, b is a string, c is a logical.
-* a's class is numeric, b is a character, c is a logical.
+* a 's class is integer, b is a character, c is a boolean.
+* a 's class is character, b is a character as well, c is a logical.
+* a 's class is numeric, b is a string, c is a logical.
+* a 's class is numeric, b is a character, c is a logical.
 
 `@hint`
 You can find out the data type of the a variable for example by typing class(a). You can do similar things for b and c.
