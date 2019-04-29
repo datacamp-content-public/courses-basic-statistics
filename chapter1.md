@@ -1095,3 +1095,51 @@ planet_df <- data.frame(planets, type, diameter, rotation, rings)
 ex() %>% check_expr("planet_df") %>% check_result() %>% check_equal()
 success_msg("Good job, you'll become an expert with data frames")
 ```
+
+---
+
+## Indexing and selecting columns from a dataframe
+
+```yaml
+type: NormalExercise
+key: d1fcbba5cb
+xp: 100
+```
+
+In the same way as you indexed your vectors, you can select elements from your dataframe using square brackets. Different from dataframes however, you now have multiple dimensions: rows and columns. That's why you can use a comma in the middle of the brackets to differentiate between rows and columns. For instance, the following code `planet_df[1,2]` would select the element in the first row and the second column from the dataframe planet_df.
+
+You can also use the $ operator to select an entire column from a dataframe. For instance, planet_df$planets would select the entire planets column from the dataframe planet_df.
+
+`@instructions`
+* Select the elements in the first row, and the second and third column from planet_df
+* Select the entire third column from planet_df
+
+`@hint`
+Remember how you could use the c operator: `planet_df[1, c(2,3)]`
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# select the values in the first row and second and third columns
+
+# select the entire third column
+```
+
+`@solution`
+```{r}
+# select the values in the first row, and second and third columns
+planet_df[1, c(2,3)]
+
+# select the entire third column
+planet_df$diameter
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("dim(mtcars)")
+success_msg("Good job, you'll become an expert in looking at your data")
+```
