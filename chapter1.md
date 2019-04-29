@@ -849,9 +849,9 @@ The term factor refers to a statistical data type used to store categorical vari
 
 It is important that R knows whether it is dealing with a continuous or a categorical variable, as the statistical models you will develop in the future treat both types differently.
 
-A good example of a categorical variable is the variable `student_status`. An individual can either be "student" or "not student". This means that "student" and "not student" are two values of the categorical variable `student_status` and every observation can be assigned one of these values. We can do this using the `factor` function.
-
 `@instructions`
+* A good example of a categorical variable is the variable `student_status`. An individual can either be "student" or "not student". This means that "student" and "not student" are two values of the categorical variable `student_status` and every observation can be assigned one of these values. We can do this using the `factor` function.
+
 * Turn the vector student_status into a factor and put this in a variable called categorical_student
 * Print the variable categorical_student
 
