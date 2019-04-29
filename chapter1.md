@@ -52,5 +52,4 @@ You can also execute R commands straight in the console. This is a good way to e
 `@sct`
 ```{r}
 ex() %>% check_output("7")
-ex() %>% check_output("18")
 ```
