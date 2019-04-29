@@ -1140,6 +1140,5 @@ planet_df$diameter
 
 `@sct`
 ```{r}
-ex() %>% check_output_expr("dim(mtcars)")
-success_msg("Good job, you'll become an expert in looking at your data")
+success_msg("Good job, you'll become an expert with data frames")
 ```
