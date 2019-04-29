@@ -441,3 +441,40 @@ ex() %>% check_expr("my_character") %>% check_result() %>% check_equal()
 ex() %>% check_expr("my_logical") %>% check_result() %>% check_equal()
 success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change my_apples to equal 12 instead of 5 and rerun the script, my_fruit will automatically update as well. Continue to the next exercise.")
 ```
+
+---
+
+## What's that data type?
+
+```yaml
+type: MultipleChoiceExercise
+key: 8c669e76f6
+xp: 50
+```
+
+Do you remember that when you added 5 + "six", you got an error due to a mismatch in data types? You can avoid such embarrassing situations by checking the data type of a variable beforehand. You can do this as follows:
+```
+class(some_variable_name)
+```
+In the workspace (you can inspect it by typing ls() in the console), some variables have already been defined. Which statement concerning these variables are correct?
+
+`@possible_answers`
+* a's class is integer, b is a character, c is a boolean.
+* a's class is character, b is a character as well, c is a logical.
+* a's class is numeric, b is a string, c is a logical.
+* a's class is numeric, b is a character, c is a logical.
+
+`@hint`
+You can find out the data type of the a variable for example by typing class(a). You can do similar things for b and c.
+
+`@pre_exercise_code`
+```{r}
+a <- 42
+b <- "forty-two"
+c <- 
+```
+
+`@sct`
+```{r}
+
+```
