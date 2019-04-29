@@ -195,5 +195,5 @@ Simply add the line # Calculate 6 + 12 above the R code that calculates 6 + 12.
 
 `@sct`
 ```{r}
-check_code()
+ex() %>% check_code()
 ```
