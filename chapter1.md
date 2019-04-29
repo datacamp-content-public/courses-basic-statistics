@@ -25,7 +25,7 @@ You can also execute R commands straight in the console. This is a good way to e
 * Add a line of code that calculates the sum of 6 and 12, and hit the 'Submit Answer' button.
 
 `@hint`
-
+Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!
 
 `@pre_exercise_code`
 ```{r}
@@ -43,7 +43,10 @@ You can also execute R commands straight in the console. This is a good way to e
 
 `@solution`
 ```{r}
+# Calculate 3 + 4
 3 + 4
+
+# Calculate 6 + 12
 6 + 12
 ```
 
