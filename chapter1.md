@@ -789,3 +789,63 @@ numeric_vector[larger_than_ten]
 ex() %>% check_output_expr("numeric_vector[larger_than_ten]")
 success_msg("Great job, you seem to get indexing!")
 ```
+
+---
+
+## Matrices
+
+```yaml
+type: NormalExercise
+key: 2e75875c91
+xp: 100
+```
+
+In R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. Since you are only working with rows and columns, a matrix is called two-dimensional.
+
+You can construct a matrix in R with the matrix() function. Consider the following example: 
+```
+matrix(1:9, byrow = TRUE, nrow = 3, ncol = 3)
+```
+In the matrix() function:
+
+* The first argument is the collection of elements that R will arrange into the rows and columns of the matrix. Here, we use 1:9 which constructs the vector c(1, 2, 3, 4, 5, 6, 7, 8, 9).
+* The argument byrow indicates that the matrix is filled by the rows. This means that the matrix is filled from left to right and when the first row is completed, the filling continues on the second row. If we want the matrix to be filled by the columns, we just place byrow = FALSE.
+* The third argument nrow indicates that the matrix should have three rows.
+* The fourth argument ncol indicates the number of columns that the matrix should have
+
+`@instructions`
+* Construct a matrix with 5 rows and 4 columns containing the numbers 1 up to 20 and assign it to the variable m. Specify the byrow argument to be TRUE
+* Print m to the console
+
+`@hint`
+You may want to try something like 
+```
+matrix(data, byrow = TRUE, nrow = 5, ncol = 4)
+```
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Construction of a matrix with 5 rows that contain the numbers 1 up to 20 and assign it to m
+
+
+# print m to the console
+```
+
+`@solution`
+```{r}
+# Construction of a matrix with 5 rows that contain the numbers 1 up to 20
+m <- matrix(1:20, byrow = TRUE, nrow = 5, ncol = 4)
+m
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("m")
+ex() %>% check_expr("m") %>% check_result() %>% check_equal()
+success_msg("Great job, you can now create matrices!")
+```
