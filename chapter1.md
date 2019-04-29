@@ -310,3 +310,69 @@ ex() %>% check_output("11")
 ex() %>% check_that(is_true(my_fruit == 11))
 success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change my_apples to equal 12 instead of 5 and rerun the script, my_fruit will automatically update as well. Continue to the next exercise.")
 ```
+
+---
+
+## Back to Apples and Oranges
+
+```yaml
+type: NormalExercise
+key: 3dc656f752
+xp: 100
+```
+
+Common sense tells you not to add apples and oranges. The my_apples and my_oranges variables both contained a number in the previous exercise. The + operator works with numeric variables in R. If you really tried to add "apples" and "oranges", and assigned a text value to the variable my_oranges but not to my_apples (see the editor), you would be trying to assign the addition of a numeric and a character variable to the variable my_fruit. This is not possible.
+
+`@instructions`
+* Click 'Submit Answer' and read the error message. Make sure to understand why this did not work.
+* Adjust the code so that R knows you have 6 oranges and thus a fruit basket with 11 pieces of fruit.
+
+`@hint`
+You have to assign the numeric value 6 to the my_oranges variable instead of the character value "six". Note how the quotation marks are used to indicate that "six" is a character.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Assign a value to the variable called my_apples
+my_apples <- 5 
+
+# Print out the value of my_apples
+my_apples       
+
+# Assign a value to the variable my_oranges and print it out
+my_oranges <- "six" 
+my_oranges 
+
+# New variable that contains the total amount of fruit
+my_fruit <- my_apples + my_oranges 
+my_fruit
+```
+
+`@solution`
+```{r}
+# Assign a value to the variable called my_apples
+my_apples <- 5  
+
+# Print out the value of answer
+my_apples  
+
+# Assign a value to the variable my_oranges and print it out
+my_oranges <- 6
+my_oranges 
+
+# New variable that contains the total amount of fruit
+my_fruit <- my_apples + my_oranges 
+my_fruit
+```
+
+`@sct`
+```{r}
+ex() %>% check_output("5")
+ex() %>% check_output("6")
+ex() %>% check_output("11")
+success_msg("Awesome, keep up the good work! Continue to the next exercise.")
+```
