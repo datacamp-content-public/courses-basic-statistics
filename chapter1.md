@@ -210,7 +210,7 @@ my_variable <- 4
 Complete the code in the editor such that it assigns the value 42 to the variable `x` in the editor. Click 'Submit Answer'. Notice that when you ask R to print `x`, the value 42 appears.
 
 `@hint`
-Look at how the value 4 was assigned to my_variable in the exercise's assignment. Do the exact same thing in the editor, but now assign 42 to the variable x.
+Look at how the value 4 was assigned to my_variable in the exercise assignment. Do the exact same thing in the editor, but now assign 42 to the variable x.
 
 `@pre_exercise_code`
 ```{r}
