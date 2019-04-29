@@ -53,4 +53,44 @@ Just add a line of R code that calculates the sum of 6 and 12, just like the exa
 `@sct`
 ```{r}
 ex() %>% check_output("7")
+ex() %>% check_output("18")
+success_msg("Awesome! Do you see how the console shows the result of the R code you submitted? Now that you're familiar with the interface, let's get down to R business!")
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: 3cef4b61e2
+xp: 100
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+
 ```
