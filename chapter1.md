@@ -307,7 +307,7 @@ my_fruit <- my_apples + my_oranges
 `@sct`
 ```{r}
 ex() %>% check_output("11")
-ex() %>% check_that(is_true(my_fruit == 11))
+ex() %>% check_expr("my_fruit") %>% check_result() %>% check_equal()
 success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change my_apples to equal 12 instead of 5 and rerun the script, my_fruit will automatically update as well. Continue to the next exercise.")
 ```
 
