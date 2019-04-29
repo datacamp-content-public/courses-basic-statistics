@@ -632,3 +632,66 @@ boolean_vector <- c(TRUE, FALSE, TRUE)
 ex() %>% check_expr("boolean_vector") %>% check_result() %>% check_equal()
 success_msg("Awesome! You defined one great boolean vector!")
 ```
+
+---
+
+## Vectors II
+
+```yaml
+type: NormalExercise
+key: 4ace475364
+xp: 100
+```
+
+In the previous assignment, you created 3 vectors: a numeric vector, a character vector and a boolean vector. Sometimes you only want to select a specific element from one of those vectors instead of using the entire vector. R makes this very easy using indexing.
+
+Indexing entails the use of square brackets [] to select elements from a vector. For instance, `numeric_vector[1]` will select the first element of the vector `numeric_vector`. `numeric_vector[c(1,3)]` will select the first and the third element of the vector numeric_vector.
+
+`@instructions`
+* Select the letter "a" from character_vector
+* Select the second and the third element of boolean_vector
+
+`@hint`
+a is the first element of character_vector and can thus be selected using character_vector[1].
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# A numeric vector containing 3 elements
+numeric_vector <- c(1, 10, 49)
+
+# a character vector containing 3 elements
+character_vector <- c("a", "b", "c")
+
+# Complete the code for 'boolean_vector'
+boolean_vector <- c(TRUE, FALSE, TRUE)
+```
+
+`@solution`
+```{r}
+# A numeric vector containing 3 elements
+numeric_vector <- c(1, 10, 49)
+
+# a character vector containing 3 elements
+character_vector <- c("a", "b", "c")
+
+# Complete the code for 'boolean_vector'
+boolean_vector <- c(TRUE, FALSE, TRUE)
+
+# select the letter a from character vector
+character_vector[1]
+
+# select the second and third element of the vector boolean vector
+boolean_vector[c(2,3)]
+```
+
+`@sct`
+```{r}
+ex() %>% check_output("a")
+ex() %>% check_output(c(FALSE, TRUE))
+success_msg("Good job! Notice that R does not print the value of a variable to the console when you do the assignment. x <- 42 did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+```
