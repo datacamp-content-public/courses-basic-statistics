@@ -248,3 +248,64 @@ x
 ex() %>% check_output("42")
 success_msg("Good job! Notice that R does not print the value of a variable to the console when you do the assignment. x <- 42 did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
 ```
+
+---
+
+## Variable assignment II
+
+```yaml
+type: NormalExercise
+key: 529be8098e
+xp: 100
+```
+
+Variables are great to perform arithmetic operations with. In this assignment, we have defined a variable my_apples. You want to define another variable called my_oranges and add these two together.
+
+```
+my_apples + my_oranges
+```
+
+`@instructions`
+* Create a variable called my_oranges and assign it the value of 6.
+* Add the variables my_apples and my_oranges and have R simply print the result.
+* Combine the variables my_apples and my_oranges into a new variable my_fruit, which is the total amount of fruits in your fruit basket.
+
+`@hint`
+my_fruit is just the sum of my_apples and my_oranges. You can use the + operator to sum the two and <- to assign that value to the variable my_fruit.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Assign a value to the variables my_apples and my_oranges
+my_apples <- 5
+
+
+# Add these two variables together and print the result
+
+
+# Create the variable my_fruit
+
+```
+
+`@solution`
+```{r}
+# Assign a value to the variables my_apples and my_oranges
+my_apples  <- 5
+my_oranges <- 6
+
+# Add these two variables together and print the result
+my_apples + my_oranges
+
+# Create the variable my_fruit
+my_fruit <- my_apples + my_oranges
+```
+
+`@sct`
+```{r}
+ex() %>% check_output("42")
+success_msg("Good job! Notice that R does not print the value of a variable to the console when you do the assignment. x <- 42 did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+```
