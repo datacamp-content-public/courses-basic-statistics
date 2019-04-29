@@ -147,3 +147,53 @@ ex() %>% check_output("32")
 ex() %>% check_output("4")
 success_msg("Great! Head over to the next exercise.")
 ```
+
+---
+
+## Documenting your code
+
+```yaml
+type: NormalExercise
+key: 0e8458804e
+xp: 100
+```
+
+Adding comments to your code is extremely important to make sure that you and others can understand what your code is about. R makes use of the # sign to add comments.
+
+It's important to note that comments are not run as R code, so they will not influence your result. For example, Calculate 3 + 4 in the editor on the right is a comment and is ignored during execution.
+
+
+
+`@instructions`
+Add another comment in the editor on the right, Calculate 6 + 12, at the appropriate location.
+
+`@hint`
+Simply add the line # Calculate 6 + 12 above the R code that calculates 6 + 12.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Calculate 3 + 4
+3 + 4
+
+
+6 + 12
+```
+
+`@solution`
+```{r}
+# Calculate 3 + 4
+3 + 4
+
+# Calculate 6 + 12
+6 + 12
+```
+
+`@sct`
+```{r}
+check_code()
+```
