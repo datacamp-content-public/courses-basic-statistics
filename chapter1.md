@@ -694,7 +694,6 @@ The (logical) comparison operators known to R are: - < for less than - > for gre
 
 The nice thing about R is that you can use these comparison operators on vectors. For example, the statement c(4,5,6) > 5 returns: FALSE FALSE TRUE. In other words, you test for every element of the vector if the condition stated by the comparison operator is TRUE or FALSE.
 
-
 `@instructions`
 * Behind the scenes, R does an element-wise comparison of each element in the vector c(4,5,6) with the element 5. However, 5 is not a vector of length three. To solve this, R automatically replicates the value 5 to generate a vector of three elements, c(5, 5, 5) and then carries out the element-wise comparison.
 
@@ -794,7 +793,6 @@ In the matrix() function:
 * The argument byrow indicates that the matrix is filled by the rows. 
 * The third argument nrow - three rows.
 * The fourth argument ncol indicates the number of columns that the matrix should have
-
 
 `@instructions`
 * Construct a matrix with 5 rows and 4 columns containing the numbers 1 up to 20 and assign it to the variable m. Specify the byrow argument to be TRUE
@@ -904,7 +902,6 @@ You may remember the matrix, a multi-dimensional object that we discussed earlie
 * 'Are your married?' or 'yes/no' questions (= boolean data type)
 * 'How old are you?' (= numeric data type)
 * 'What is your opinion on this product?' or other 'open-ended' questions (= character data type)
-
 
 `@instructions`
 The output, namely the respondents' answers to the questions formulated above, is a data set of different data types. You will often find yourself working with data sets that contain different data types instead of only one. A data frame has the variables of a data set as columns and the observations as rows. This will be a familiar concept for those coming from different statistical software packages such as SAS or SPSS.
@@ -1019,7 +1016,6 @@ As a first goal, you want to construct a data frame that describes the main char
 * The planet's diameter relative to the diameter of the Earth.
 * The planet's rotation across the sun relative to that of the Earth.
 * If the planet has rings or not (TRUE or FALSE).
-
 
 `@instructions`
 You construct a data frame with the data.frame() function. As arguments, you should provide the above mentioned vectors as input that should become the different columns of that data frame. Therefore, it is important that each vector used to construct a data frame has an equal length. But do not forget that it is possible (and likely) that they contain different types of data.
@@ -1226,7 +1222,7 @@ Another way to check is to refer to the names of the components: `my_list[["my_v
 
 A last way to grab an element from a list is using the $ sign. The following code would select my_df from my_list: my_list$my_df.
 
-Besides selecting components, you often need to select specific elements out of these components. 
+Besides selecting components, you often need to select specific elements out of these components.
 
 `@instructions`
 For example, with `my_list[[1]][1]` you select from the first component of my_list the first element. This would select the number 1.
