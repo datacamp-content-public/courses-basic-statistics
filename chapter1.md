@@ -1160,3 +1160,73 @@ ex() %>% check_output_expr("planet_df[1, c(2,3)]")
 ex() %>% check_output_expr("planet_df$diameter")
 success_msg("Good job, you'll become an expert with data frames")
 ```
+
+---
+
+## Lists
+
+```yaml
+type: NormalExercise
+key: f67c593952
+xp: 100
+```
+
+A list in R is similar to your to-do list at work or school: the different items on that list most likely differ in length, characteristic, type of activity that has to do be done.
+
+A list in R allows you to gather a variety of objects under one name (that is, the name of the list) in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc. It is not even required that these objects are related to each other.
+
+You can easily construct a list using the list() function. In this function you can wrap the different elements like so: `list(item1, item2, item3)`.
+
+`@instructions`
+* Put the objects my_vector, my_matrix and my_df into a list called my_list
+* Make sure to print my_list
+
+`@hint`
+Look at the example in the last paragraph above the instructions. Just replace the names with the names of my_vector my_matrix and my_df
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# First 10 elements of the built-in data frame 'mtcars'
+my_df <- mtcars[1:10,]
+
+# Construct my_list with these different elements:
+
+
+# print my_list to the console
+
+```
+
+`@solution`
+```{r}
+# solution code
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+# First 10 elements of the built-in data frame 'mtcars'
+my_df <- mtcars[1:10,]
+
+# Construct list with these different elements:
+my_list <- list(my_vector, my_matrix, my_df)
+
+# print my_list to the console
+my_list
+```
+
+`@sct`
+```{r}
+ex() %>% check_output_expr("my_list")
+ex() %>% check_expr("my_list") %>% check_result() %>% check_equal()
+success_msg("You're starting great with lists!")
+```
