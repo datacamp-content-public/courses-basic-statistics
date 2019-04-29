@@ -306,6 +306,7 @@ my_fruit <- my_apples + my_oranges
 
 `@sct`
 ```{r}
-ex() %>% check_output("42")
-success_msg("Good job! Notice that R does not print the value of a variable to the console when you do the assignment. x <- 42 did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+ex() %>% check_output("11")
+ex() %>% check_that(is_true(my_fruit == 11))
+success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change my_apples to equal 12 instead of 5 and rerun the script, my_fruit will automatically update as well. Continue to the next exercise.")
 ```
